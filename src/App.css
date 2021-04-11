@@ -1,0 +1,46 @@
+.app {
+  --main-color: #000000;
+  --secondary-color: #ffffff;
+  --tecondary-color: #1ed760;
+  --fecondary-color: #9893da;
+  --fiecondary-color: #ed6b86;
+
+  --main-font: "Poppins", sans-serif;
+  --secondary-font: "Noto Sans JP", sans-serif;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app ul {
+  padding: 0;
+}
+
+.app li:hover {
+  cursor: pointer;
+}
+
+.app li {
+  display: inline;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.app p {
+  font-size: 0.9rem;
+}
+
+.app input {
+  font-weight: 400;
+}
+
+.app input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.app a {
+  text-decoration: none;
+  color: inherit;
+}
