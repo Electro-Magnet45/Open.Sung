@@ -7,6 +7,14 @@
   justify-content: center;
   height: 100vh;
   font-family: var(--main-font);
-  background-color: var(--main-color);
+  background-color: var(--fiecondary-color);
   color: var(--secondary-color);
+}
+.errorPage__container ::selection {
+  background-color: var(--secondary-color);
+  color: var(--fiecondary-color);
+}
+
+.errorPage__container p {
+  font-size: 2rem;
 }

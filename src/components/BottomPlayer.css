@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+.bottomPlayer__container {
+  background-color: #181818;
+  color: var(--secondary-color);
+  height: 5.68rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottomPlayer-cont__div {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+}
+
+.bottomPlayer-cont-1_sections {
+  flex: 1;
+}
+
+.bottomPlayer-cont-1_detailsSec {
+  display: flex;
+  flex-direction: row;
+}
+
+.bottomPlayer-cont-1-1_sections {
+  flex: content;
+}
+
+.bottomPlayer-cont-1-1_sections img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 1.5px solid;
+  margin: 0 0 0 1rem;
+}
+
+.bottomPlayer-cont-1-1_detailSec {
+  font-family: var(--main-font);
+  margin: auto 0 auto 1rem;
+}
+.bottomPlayer-cont-1-1_detailSec ::selection {
+  background-color: var(--secondary-color);
+  color: #181818;
+}
+
+.bottomPlayer-cont-1-1_detailSec h6 {
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.bottomPlayer-cont-1-1_detailSec p {
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.bottomPlayer-cont-1_playerSec {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomPlayer-cont-1-2_toolsSec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bottomPlayer-cont-1-2_toolsSec svg {
+  fill: #b3b3b3;
+}
+.bottomPlayer-cont-1-2_toolsSec svg:hover {
+  fill: var(--secondary-color);
+}
+
+.bottomPlayer-cont-1-2-1_skip {
+  height: 2rem;
+  width: 2rem;
+  margin: 6px 0 0 0;
+}
+
+.bottomPlayer-cont-1-2-1_play {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 1rem 0 1rem;
+  fill: var(--secondary-color) !important;
+}
+.bottomPlayer-cont-1-2-1_play:hover {
+  width: 2.8rem;
+}
+
+.bottomPlayer-cont-1-2-1_rest {
+  height: 1.3rem;
+  width: 1.3rem;
+  margin: 0.7rem 1rem 0 1rem;
+}

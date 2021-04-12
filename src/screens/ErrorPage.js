@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/ErrorPage.css";
 
 import { Link } from "react-router-dom";
 
-const ErrorPage = () => {
+const ErrorPage = ({ setShowBars }) => {
+  useEffect(() => {
+    setShowBars(false);
+
+    return () => {
+      setShowBars(true);
+    };
+  }, [setShowBars]);
+
   return (
     <div className="errorPage">
       <div className="errorPage__container">
