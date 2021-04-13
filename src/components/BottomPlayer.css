@@ -5,8 +5,9 @@
   color: var(--secondary-color);
   height: 5.68rem;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  z-index: 2;
 }
 
 .bottomPlayer-cont__div {
@@ -30,10 +31,6 @@
 .bottomPlayer-cont-1_detailsSec {
   display: flex;
   flex-direction: row;
-}
-
-.bottomPlayer-cont-1-1_sections {
-  flex: content;
 }
 
 .bottomPlayer-cont-1-1_sections img {
@@ -61,6 +58,18 @@
 .bottomPlayer-cont-1-1_detailSec p {
   font-weight: 300;
   font-size: 0.7rem;
+}
+
+.bottomPlayer-cont-1-1_iconsSec {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 0 1rem;
+}
+
+.bottomPlayer-cont-1-1_iconsSec_icon {
+  height: 1rem;
+  width: 1rem;
 }
 
 .bottomPlayer-cont-1_playerSec {

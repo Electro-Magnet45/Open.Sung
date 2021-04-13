@@ -1,0 +1,8 @@
+.topHeader__container {
+  background-color: var(--main-color);
+  height: 5rem;
+  width: 81.8vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+}

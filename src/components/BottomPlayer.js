@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./BottomPlayer.css";
 
 import bottomPlayer__icon from "../images/BottomPlayer__icon.jpg";
@@ -18,14 +18,11 @@ import {
   SkipPrevious,
   SkipNext,
   Shuffle,
+  Heart,
 } from "@styled-icons/boxicons-regular";
 
 const BottomPlayer = () => {
   const [volume, setVolume] = useState(0);
-
-  useEffect(() => {
-    console.log(volume);
-  }, [volume]);
 
   return (
     <div className="bottomPlayer">
@@ -38,6 +35,9 @@ const BottomPlayer = () => {
             <div className="bottomPlayer-cont-1-1_detailSec bottomPlayer-cont-1-1_sections">
               <h6>{"Song Name"}</h6>
               <p>{"Song Author"}</p>
+            </div>
+            <div className="bottomPlayer-cont-1-1_iconsSec bottomPlayer-cont-1-1_sections">
+              <Heart className="bottomPlayer-cont-1-1_iconsSec_icon" />
             </div>
           </div>
 
