@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./BottomPlayer.css";
 
 import bottomPlayer__icon from "../images/BottomPlayer__icon.jpg";
@@ -22,7 +22,32 @@ import {
 } from "@styled-icons/boxicons-regular";
 
 const BottomPlayer = () => {
+  const [durationPercentage, setDurationPercentage] = useState(0);
+  const [nowDuration, setNowDuration] = useState(undefined);
+  const [maxDuration, setMaxDuration] = useState(undefined);
   const [volume, setVolume] = useState(0);
+
+  useEffect(() => {
+    setMaxDuration("06:00");
+  }, []);
+
+  useEffect(() => {
+    if (maxDuration) {
+      const durationMaxMax = maxDuration
+        .split(":")
+        .reduce((acc, time) => 60 * acc + +time);
+      const duration = Math.floor((durationMaxMax * durationPercentage) / 100);
+
+      const minutes = Math.floor(duration / 60);
+      const seconds = duration % 60;
+
+      const output = `${String(minutes).padStart(2, 0)}:${String(
+        seconds
+      ).padStart(2, 0)}`;
+
+      setNowDuration(output);
+    }
+  }, [maxDuration, durationPercentage]);
 
   return (
     <div className="bottomPlayer">
@@ -51,7 +76,14 @@ const BottomPlayer = () => {
             </div>
 
             <div className="bottomPlayer-cont-1-2_controlSec">
-              <Slider className="bottomPlayer-cont-1_slider" />
+              <p>{nowDuration ? nowDuration : "00:00"}</p>
+              <Slider
+                className="bottomPlayer-cont-1_slider"
+                onChange={(event, newDurationPercentage) =>
+                  setDurationPercentage(newDurationPercentage)
+                }
+              />
+              <p>{maxDuration ? maxDuration : "00:00"}</p>
             </div>
           </div>
 
