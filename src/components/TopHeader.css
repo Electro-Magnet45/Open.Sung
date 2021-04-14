@@ -2,10 +2,34 @@
 
 .topHeader__container {
   background-color: var(--main-color);
-  height: 5rem;
+  color: var(--secondary-color);
+  height: 3.75rem;
   width: 81.8vw;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.topHeader-cont_simpleNavSec {
+  padding: 0 0 0 2.6rem;
+}
+
+.topHeader-cont_icons {
+  height: 1.3rem;
+  width: 1.3rem;
+  margin: 0 1rem 0 0;
+  fill: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.topHeader-conticons_left {
+  transform: rotate(180deg);
+}
+
+.topHeader-cont-1_enabled {
+  fill: var(--secondary-color) !important;
+  cursor: pointer;
 }

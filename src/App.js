@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import "./App.css";
 
 import TopHeader from "./components/TopHeader";
@@ -8,13 +9,34 @@ import Home from "./screens/Home";
 import Search from "./screens/Search";
 import ErrorPage from "./screens/ErrorPage";
 
-import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  Redirect,
+  useLocation,
+  useHistory,
+} from "react-router-dom";
+import { increment } from "./redux/historySlice";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
+  const history = useHistory();
+  const dispatch = useDispatch();
 
   const [showBars, setShowBars] = useState(true);
+
+  useEffect(() => {
+    history.listen((location) => {
+      dispatch(
+        increment([
+          {
+            path: location.pathname,
+          },
+        ])
+      );
+    });
+  }, [dispatch]);
 
   return (
     <div className="app">
