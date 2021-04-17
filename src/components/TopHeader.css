@@ -33,3 +33,36 @@
   fill: var(--secondary-color) !important;
   cursor: pointer;
 }
+
+.topHeader-cont_accountSec {
+  margin: 0 1rem 0 auto;
+}
+.topHeader-cont_accountSec:hover {
+  background-color: #353333;
+}
+
+.topHeader-cont-2_container {
+  padding: 0.3rem 0.2rem;
+}
+
+.topHeader-cont-2-1_mainDiv {
+  display: flex;
+  align-items: center;
+}
+
+.topHeader-cont-2-1_mainDiv:hover {
+  cursor: pointer;
+}
+
+.topHeader-cont-2-1_icon {
+  height: 2rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.topHeader-cont-2-1_overlayDiv {
+  display: none;
+}
+
+.topHeader-cont-2-1-over_visible {
+  display: block;
+}
