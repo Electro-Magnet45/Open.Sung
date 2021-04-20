@@ -12,6 +12,9 @@
   display: flex;
   align-items: center;
 }
+.topHeader__container ::selection {
+  pointer-events: none;
+}
 
 .topHeader-cont_simpleNavSec {
   padding: 0 0 0 2.6rem;
@@ -37,9 +40,6 @@
 .topHeader-cont_accountSec {
   margin: 0 1rem 0 auto;
 }
-.topHeader-cont_accountSec:hover {
-  background-color: #353333;
-}
 
 .topHeader-cont-2_container {
   padding: 0.3rem 0.2rem;
@@ -52,6 +52,7 @@
 
 .topHeader-cont-2-1_mainDiv:hover {
   cursor: pointer;
+  background-color: #353333;
 }
 
 .topHeader-cont-2-1_icon {
@@ -61,8 +62,35 @@
 
 .topHeader-cont-2-1_overlayDiv {
   display: none;
+  position: absolute;
+  right: 0.5rem;
+  width: inherit;
+  margin: 0.5rem 0 0 0;
 }
 
 .topHeader-cont-2-1-over_visible {
   display: block;
+  width: inherit;
+}
+
+.topHeader-cont-2-1-2_container {
+  display: flex;
+  flex-direction: column;
+  width: 13rem;
+}
+
+.topHeader-cont-2-1-2-1_item {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.topHeader-cont-2-1-2-1_item:hover {
+  background-color: #353333;
+}
+
+.topHeader-cont-2-1-2-1_item svg {
+  height: 1.5rem;
+  margin: 0 0 0 auto;
+  transform: rotate(30deg);
 }

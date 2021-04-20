@@ -4,28 +4,25 @@ import "./BottomPlayer.css";
 import bottomPlayer__icon from "../images/BottomPlayer__icon.jpg";
 
 import { Slider } from "@material-ui/core";
-
+import { ArrowRepeatAll } from "@styled-icons/fluentui-system-filled";
 import {
-  PlayCircle,
-  ArrowRepeatAll,
-} from "@styled-icons/fluentui-system-filled";
-import {
-  SpeakerMute,
-  Speaker1,
-  Speaker2,
-} from "@styled-icons/fluentui-system-regular";
-import {
-  SkipPrevious,
-  SkipNext,
-  Shuffle,
   Heart,
-} from "@styled-icons/boxicons-regular";
+  PauseCircleFill,
+  PlayCircleFill,
+  SkipEndFill,
+  SkipStartFill,
+  Shuffle,
+  VolumeMute as SpeakerMute,
+  VolumeDown as Speaker1,
+  VolumeUp as Speaker2,
+} from "@styled-icons/bootstrap";
 
 const BottomPlayer = () => {
   const [durationPercentage, setDurationPercentage] = useState(0);
   const [nowDuration, setNowDuration] = useState(undefined);
   const [maxDuration, setMaxDuration] = useState(undefined);
   const [volume, setVolume] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     setMaxDuration("06:00");
@@ -69,9 +66,19 @@ const BottomPlayer = () => {
           <div className="bottomPlayer-cont-1_playerSec bottomPlayer-cont-1_sections">
             <div className="bottomPlayer-cont-1-2_toolsSec">
               <Shuffle className="bottomPlayer-cont-1-2-1_rest" />
-              <SkipPrevious className="bottomPlayer-cont-1-2-1_skip" />
-              <PlayCircle className="bottomPlayer-cont-1-2-1_play" />
-              <SkipNext className="bottomPlayer-cont-1-2-1_skip" />
+              <SkipStartFill className="bottomPlayer-cont-1-2-1_skip" />
+              {isPlaying ? (
+                <PauseCircleFill
+                  className="bottomPlayer-cont-1-2-1_playPause"
+                  onClick={() => setIsPlaying((prev) => !prev)}
+                />
+              ) : (
+                <PlayCircleFill
+                  className="bottomPlayer-cont-1-2-1_playPause"
+                  onClick={() => setIsPlaying((prev) => !prev)}
+                />
+              )}
+              <SkipEndFill className="bottomPlayer-cont-1-2-1_skip" />
               <ArrowRepeatAll className="bottomPlayer-cont-1-2-1_rest" />
             </div>
 
