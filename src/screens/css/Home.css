@@ -1,8 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 .home {
-  height: 75rem;
-  background-color: var(--main-color);
+  background-color: rgb(83, 83, 83);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
   color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
   padding-top: 3rem;
+}
+
+.home_container {
+  margin: 0.5rem 0 0 1.5rem;
+  font-family: var(--main-font);
+  font-size: 0.8rem;
+}
+
+.home-cont_titleSec {
+  margin: 0 0 1rem 0;
+}
+
+.home-cont-2_div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gridBox {
+  margin: 1rem 2rem;
+  height: 12.25rem;
+  width: 12.25rem;
+  background-color: white;
 }

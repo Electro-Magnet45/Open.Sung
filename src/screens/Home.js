@@ -11,7 +11,51 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       <div className="home">
-        <h1>Home</h1>
+        <div className="home_container">
+          <div className="home-cont_titleSec">
+            <h1>Recent</h1>
+          </div>
+
+          <div className="home-cont_recentSec">
+            <div className="home-cont-2_div">
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+              <div className="gridBox">
+                <div className="gridBox_container">
+                  <h5>sfsdf</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.div>
   );

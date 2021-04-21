@@ -10,9 +10,7 @@ const Search = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="search">
-        <h1>Search</h1>
-      </div>
+      <div className="search"></div>
     </motion.div>
   );
 };

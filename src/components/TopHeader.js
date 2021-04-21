@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./TopHeader.css";
 
 import { ClickAwayListener } from "@material-ui/core";
 import { IosArrowLeft, ArrowUp } from "@styled-icons/fluentui-system-filled";
-import { Person } from "@styled-icons/fluentui-system-regular";
+import { Person, Search } from "@styled-icons/fluentui-system-regular";
 
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 const TopHeader = () => {
   const history = useHistory();
+  const location = useLocation();
 
   const [openAccountBar, setOpenAccountBar] = useState(false);
+  const [isSearchPage, setIsSearchPage] = useState(false);
   const historyPaths = useSelector((state) => state.history.paths);
 
   const handleClickAway = () => {
@@ -19,6 +21,14 @@ const TopHeader = () => {
       setOpenAccountBar((prev) => !prev);
     }
   };
+
+  useEffect(() => {
+    if (location.pathname.substr(1) === "search") {
+      setIsSearchPage(true);
+    } else {
+      setIsSearchPage(false);
+    }
+  }, [location]);
 
   return (
     <div className="topHeader">
@@ -39,6 +49,14 @@ const TopHeader = () => {
             onClick={() => history.goForward()}
           />
         </div>
+
+        {isSearchPage && (
+          <div className="topHeader-cont_searchSec">
+            <Search className="topHeader-cont-2-0_icon" />
+            <input type="text" placeholder="Search" autoFocus />
+          </div>
+        )}
+
         <div className="topHeader-cont_accountSec">
           <ClickAwayListener onClickAway={handleClickAway}>
             <div className="topHeader-cont-2_container">

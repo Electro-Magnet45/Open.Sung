@@ -25,6 +25,7 @@
   color: #b3b3b3;
   text-align: initial;
   font-size: 0.95rem;
+  border-radius: 1rem;
 }
 
 .sideBar-cont-1-1_navSec > .selected {
@@ -51,4 +52,5 @@
 .fixed-selected {
   background-color: #413c3c !important;
   color: var(--secondary-color) !important;
+  border-radius: 0.5rem;
 }

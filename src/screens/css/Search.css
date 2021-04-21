@@ -1,8 +1,5 @@
 .search {
-  height: 75rem;
   background-color: var(--main-color);
   color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
   padding-top: 3rem;
 }

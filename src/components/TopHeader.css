@@ -37,6 +37,31 @@
   cursor: pointer;
 }
 
+.topHeader-cont_searchSec {
+  margin: 0 0 0 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.topHeader-cont-2-0_icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  left: 1rem;
+  fill: var(--main-color);
+}
+
+.topHeader-cont_searchSec input {
+  height: 2.5rem;
+  width: 20rem;
+  padding: 0 0 0 3rem;
+  font-size: 0.9rem;
+  border-radius: 3rem;
+  border: 1px solid;
+  font-family: var(--main-font);
+}
+
 .topHeader-cont_accountSec {
   margin: 0 1rem 0 auto;
 }
