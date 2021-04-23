@@ -9,6 +9,7 @@
   --secondary-font: "Noto Sans JP", sans-serif;
 
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .app ul {

@@ -16,6 +16,10 @@ const TopHeader = () => {
   const [isSearchPage, setIsSearchPage] = useState(false);
   const historyPaths = useSelector((state) => state.history.paths);
 
+  function noScroll() {
+    window.scrollTo(0, 0);
+  }
+
   const handleClickAway = () => {
     if (openAccountBar) {
       setOpenAccountBar((prev) => !prev);

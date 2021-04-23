@@ -4,11 +4,11 @@
   background-color: rgb(83, 83, 83);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
   color: var(--secondary-color);
-  padding-top: 3rem;
+  padding: 3rem 0 5rem 0;
 }
 
 .home_container {
-  margin: 0.5rem 0 0 1.5rem;
+  margin: 0.5rem 0 5rem 1.5rem;
   font-family: var(--main-font);
   font-size: 0.8rem;
 }
@@ -20,11 +20,4 @@
 .home-cont-2_div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-.gridBox {
-  margin: 1rem 2rem;
-  height: 12.25rem;
-  width: 12.25rem;
-  background-color: white;
 }
